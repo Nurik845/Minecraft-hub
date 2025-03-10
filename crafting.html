@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crafting Table</title>
+    <link rel="stylesheet" href="crafting.css" />
+  </head>
+  <body>
+    <h1>Crafting Table</h1>
+
+    <div id="inventory">
+      <img
+        src="./assets/wood_planks.png"
+        class="inventory-item"
+        onclick="selectItem('plank')"
+        alt="Planks"
+      />
+      <span id="plank-count">6</span>
+    </div>
+
+    <div id="crafting-container">
+      <h2>CRAFTING:</h2>
+
+      <div id="crafting-grid">
+        <div class="slot" onclick="placeItem(0)"></div>
+        <div class="slot" onclick="placeItem(1)"></div>
+        <div class="slot" onclick="placeItem(2)"></div>
+        <div class="slot" onclick="placeItem(3)"></div>
+      </div>
+
+      <div id="arrow">➡️</div>
+
+      <div id="result-slot"></div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="craft()">Craft</button>
+      <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+
+    <script src="crafting.js"></script>
+  </body>
+</html>

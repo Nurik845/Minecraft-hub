@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play - Minecraft Hub</title>
+    <link rel="stylesheet" href="play.css" />
+  </head>
+  <body>
+    <div id="play-container">
+      <img id="logo" src="assets/minecraft-logo.png" alt="Minecraft Logo" />
+
+      <div class="menu">
+        <input type="text" id="world-name" placeholder="Enter World Name" />
+        <button class="mode-btn" onclick="selectMode('Survival')">
+          Survival
+        </button>
+        <button class="mode-btn" onclick="selectMode('Creative')">
+          Creative
+        </button>
+        <button class="mode-btn" onclick="selectMode('Hardcore')">
+          Hardcore
+        </button>
+        <button id="create-world" onclick="createWorld()">Create World</button>
+        <button id="back" onclick="goBack()">Back</button>
+      </div>
+    </div>
+
+    <script src="play.js"></script>
+  </body>
+</html>

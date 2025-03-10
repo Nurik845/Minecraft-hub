@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skins</title>
+    <link rel="stylesheet" href="skins.css" />
+  </head>
+  <body>
+    <h1>Choose Your Skin</h1>
+
+    <div id="skin-container">
+      <div id="skin-viewer"></div>
+      <input type="file" id="skin-upload" accept="image/png" />
+      <button onclick="applySkin()">Apply Skin</button>
+      <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="skins.js"></script>
+  </body>
+</html>

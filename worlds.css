@@ -1,0 +1,124 @@
+@import url("https://fonts.cdnfonts.com/css/minecraft-4");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Minecraft", sans-serif;
+  text-align: center;
+  background: url("assets/minecraft-background.png") repeat center center fixed;
+  background-size: 150%;
+  animation: moveBackground 20s linear infinite alternate;
+  color: white;
+  padding: 15px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -500px 0;
+  }
+}
+
+h1 {
+  font-size: 28px;
+  text-shadow: 3px 3px 0 black;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  width: 80%;
+  max-width: 500px;
+}
+
+li {
+  font-size: 20px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+
+li:hover {
+  background: rgba(0, 200, 0, 0.8);
+  border-color: lime;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: 3px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: darkgreen;
+}
+
+button:active {
+  background: #444;
+}
+
+button:nth-child(2) {
+  background: red;
+}
+
+button:nth-child(2):hover {
+  background: darkred;
+}
+
+@media (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  li {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}

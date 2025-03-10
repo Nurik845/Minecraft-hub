@@ -1,0 +1,219 @@
+@import url("https://fonts.cdnfonts.com/css/minecraft-4");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Minecraft", sans-serif;
+  background: url("assets/minecraft-background.png") repeat center/cover;
+  background-size: 150%;
+  animation: moveBackground 20s linear infinite alternate;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -500px 0;
+  }
+}
+
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+#loading-logo {
+  width: 300px;
+  filter: drop-shadow(8px 8px 0px black);
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+#progress-container {
+  width: 250px;
+  height: 18px;
+  background: #3a3a3a;
+  border: 2px solid white;
+  margin-top: 20px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: white;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  background: url("assets/pixel-spinner.png") no-repeat center/contain;
+  margin-top: 15px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#progress-text {
+  font-size: 18px;
+  margin-top: 8px;
+  color: white;
+}
+
+#logo {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  filter: drop-shadow(8px 8px 0px black);
+  animation: float 2s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.menu button {
+  width: 80%;
+  max-width: 300px;
+  height: 60px;
+  font-size: 20px;
+  background: #b0b0b0;
+  color: black;
+  border: 4px solid black;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  text-transform: uppercase;
+}
+
+.menu button:hover {
+  background: #00aa00;
+  color: white;
+}
+
+.menu button:active {
+  background: #808080;
+}
+
+#skins-container {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  text-align: center;
+}
+
+#skin-viewer {
+  width: 100px;
+  height: 100px;
+}
+
+#skins-button {
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  background: #b0b0b0;
+  border: 3px solid black;
+  margin-top: 5px;
+}
+
+#skins-button:hover {
+  background: #00aa00;
+  color: white;
+}
+
+@media (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #logo {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .menu button {
+    width: 90%;
+    font-size: 18px;
+    height: 55px;
+  }
+
+  #skins-container {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  #skin-viewer {
+    width: 80px;
+    height: 80px;
+  }
+
+  #skins-button {
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  #progress-container {
+    width: 200px;
+    height: 16px;
+  }
+
+  #loading-logo {
+    width: 250px;
+  }
+}

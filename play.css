@@ -1,0 +1,95 @@
+@import url("https://fonts.cdnfonts.com/css/minecraft-4");
+
+body {
+  font-family: "Minecraft", sans-serif;
+  background: url("assets/minecraft-background.png") repeat-x center/cover;
+  background-size: 150%;
+  animation: moveBackground 20s linear infinite alternate;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -500px 0;
+  }
+}
+
+#play-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#logo {
+  width: 750px;
+  filter: drop-shadow(8px 8px 0px black);
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input {
+  width: 400px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Minecraft", sans-serif;
+  background: #b0b0b0;
+  border: 4px solid black;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 400px;
+  height: 70px;
+  font-size: 30px;
+  font-family: "Minecraft", sans-serif;
+  background: #b0b0b0;
+  color: black;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: #00aa00;
+  color: white;
+  border-color: #006600;
+}
+
+button:active {
+  background: #808080;
+}
+
+#back {
+  background: #aa0000;
+}
+
+#back:hover {
+  background: #ff0000;
+}

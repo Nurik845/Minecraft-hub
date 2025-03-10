@@ -1,0 +1,169 @@
+@import url("https://fonts.cdnfonts.com/css/minecraft-4");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Minecraft", sans-serif;
+  text-align: center;
+  background: url("assets/minecraft-background.png") repeat center center fixed;
+  background-size: 150%;
+  animation: moveBackground 20s linear infinite alternate;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -500px 0;
+  }
+}
+
+h1 {
+  color: white;
+  text-shadow: 3px 3px black;
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+#inventory {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inventory-item {
+  width: 45px;
+  cursor: pointer;
+}
+
+#plank-count {
+  color: white;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+#crafting-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#crafting-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 45px);
+  grid-template-rows: repeat(2, 45px);
+  gap: 5px;
+}
+
+.slot,
+#result-slot {
+  width: 45px;
+  height: 45px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#result-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#arrow {
+  font-size: 30px;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: darkgreen;
+}
+
+button:nth-child(2) {
+  background: red;
+}
+
+button:nth-child(2):hover {
+  background: darkred;
+}
+
+@media (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .inventory-item {
+    width: 35px;
+  }
+
+  #plank-count {
+    font-size: 18px;
+  }
+
+  #crafting-grid {
+    gap: 4px;
+  }
+
+  .slot,
+  #result-slot {
+    width: 40px;
+    height: 40px;
+  }
+
+  #arrow {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+}
